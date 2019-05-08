@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Content Copy Finder\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-01 10:10+0000\n"
+"PO-Revision-Date: 2019-05-01 10:19+0000\n"
+"Last-Translator: jokerov@gmail.com\n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-5.1.1"
+
+#. %s: PHP version
+#: content-copy-finder.php:29
+#, php-format
+msgid ""
+"Content Copy Finder requires PHP version %s+, plugin is currently NOT "
+"RUNNING."
+msgstr ""
+"Content Copy Finder требует версию PHP не ниже %s. Поскольку вы используете "
+"более раннюю версию, плагин  НЕ работает."
+
+#. %s: WordPress version
+#: content-copy-finder.php:38
+#, php-format
+msgid ""
+"Content Copy Finder requires WordPress version %s+. Because you are using an "
+"earlier version, the plugin is currently NOT RUNNING."
+msgstr ""
+"Content Copy Finder требует WordPress версию не ниже %s. Поскольку вы "
+"используете более раннюю версию, плагин  НЕ работает."
+
+#: includes/class-plugin.php:29 includes/class-plugin.php:38
+msgid "Something went wrong."
+msgstr "Что-то пошло не так."
+
+#. Name of the plugin
+#: includes/admin/classes/class-single-check.php:41
+#: includes/admin/classes/class-single-check.php:80
+#: includes/admin/classes/class-settings.php:39
+#: includes/admin/classes/class-settings.php:40
+#: includes/admin/views/settings.php:2
+msgid "Content Copy Finder"
+msgstr "Content Copy Finder"
+
+#: includes/admin/classes/class-single-check.php:135
+msgid "Uniqueness Check Request Error"
+msgstr "Ошибка запроса на проверку уникальности"
+
+#: includes/admin/classes/class-settings.php:94
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/admin/classes/class-settings.php:101
+msgid "API Key"
+msgstr "Ваш API ключ"
+
+#: includes/admin/classes/class-settings.php:109
+msgid "may take on page"
+msgstr "можно получить на странице"
+
+#: includes/admin/classes/class-settings.php:116
+msgid "Auto ckeck"
+msgstr "Автоматическая проверка"
+
+#: includes/admin/classes/class-settings.php:124
+msgid "Check posts when adding and editing"
+msgstr "Проверять записи после сохранения и изменения"
+
+#: includes/admin/classes/class-settings.php:125
+msgid "Do not automatically check"
+msgstr "Не проверять автоматически"
+
+#: includes/admin/classes/class-settings.php:144
+msgid "Post types"
+msgstr "Типы записей"
+
+#: includes/admin/ajax/actions.php:17
+msgid "API Error:"
+msgstr "Ошибка API:"
+
+#: includes/admin/ajax/actions.php:25 includes/admin/views/account.php:3
+msgid "rub."
+msgstr "руб."
+
+#: includes/admin/views/column.php:1 includes/admin/views/column.php:6
+#: includes/admin/views/metabox.php:1 includes/admin/views/metabox.php:4
+msgid "Uniqueness check in progress"
+msgstr "Идёт проверка"
+
+#: includes/admin/views/column.php:4 includes/admin/views/metabox.php:12
+msgid "Uniqueness"
+msgstr "Уникальность"
+
+#: includes/admin/views/column.php:4
+msgid "text checked"
+msgstr "проверен"
+
+#: includes/admin/views/column.php:8 includes/admin/views/metabox.php:30
+msgid "Check error"
+msgstr "Ошибка при проверке"
+
+#: includes/admin/views/column.php:11
+msgid "Not yet verified"
+msgstr "Ещё не проверен"
+
+#: includes/admin/views/column.php:14
+msgid "Check"
+msgstr "Проверить"
+
+#: includes/admin/views/settings.php:3
+msgid ""
+"The plugin allows you to check the text of your records for uniqueness and "
+"find copies on other sites."
+msgstr ""
+"Плагин позволяет проверять текст ваших записей на уникальность и находить "
+"копии на других сайтах."
+
+#: includes/admin/views/settings.php:4
+msgid "For check use API"
+msgstr "Для проверки используется API сервиса"
+
+#: includes/admin/views/settings.php:7
+msgid "Account"
+msgstr "Ваш аккаунт"
+
+#: includes/admin/views/settings.php:13
+msgid "Scheme of work"
+msgstr "Схема работы"
+
+#: includes/admin/views/metabox.php:5
+msgid "Get results without page reload"
+msgstr "Получить результат без перезагрузки страницы"
+
+#: includes/admin/views/metabox.php:9
+msgid "Check text"
+msgstr "Проверить текст"
+
+#: includes/admin/views/metabox.php:16
+msgid "Page URL"
+msgstr "Адрес страницы"
+
+#: includes/admin/views/metabox.php:17
+msgid "Matches"
+msgstr "Совпадений"
+
+#: includes/admin/views/account.php:2
+msgid "Balance"
+msgstr "Денег на счету"
+
+#: includes/admin/views/account.php:3
+msgid "Check price"
+msgstr "Стоимость одной проверки"
+
+#: includes/admin/views/account.php:3
+msgid "At your disposal"
+msgstr "В Вашем распоряжении"
+
+#: includes/admin/views/account.php:3
+msgid "checks"
+msgstr "проверок"
+
+#: includes/admin/views/account.php:9
+msgid "Check balance"
+msgstr "Проверить баланс"
+
+#: includes/admin/views/account.php:10
+msgid "Add funds"
+msgstr "Пополнить баланс"
+
+#: includes/admin/views/steps.php:1
+msgid "Register on the site"
+msgstr "Зарегистрируйтесь на сайте"
+
+#: includes/admin/views/steps.php:2
+msgid "Get API key on page"
+msgstr "Получите API ключ на странице"
+
+#: includes/admin/views/steps.php:3
+msgid "Enter your unique API key in the plugin settings"
+msgstr "Введите ваш уникальный API-ключ в настройках плагина"
+
+#: includes/admin/views/steps.php:4
+msgid ""
+"When adding and editing posts, their text will be automatically checked for "
+"uniqueness."
+msgstr ""
+"При добавлении и правке постов их текст будет автоматически проверяться на "
+"уникальность!"
+
+#. Description of the plugin
+msgid "Check text for uniqueness and plagiarism search"
+msgstr "Проверка текста на уникальность и поиск плагиата"
+
+#. Author of the plugin
+msgid "Eugene Jokerov"
+msgstr "Eugene Jokerov"
+
+#. Author URI of the plugin
+msgid "https://profiles.wordpress.org/jokerov/"
+msgstr "https://profiles.wordpress.org/jokerov/"
