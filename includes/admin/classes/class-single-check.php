@@ -170,14 +170,18 @@ class Single_Check {
 	 * @param  int $post_id
 	 * @param  string $text
 	 *
-	 * @return bool
+	 * @return bool|array
 	 */
 	public function check_post( $post_id, $text = null ) {
         $post_id = intval( $post_id );
         if ( is_null( $text ) ) {
 			$post = get_post( $post_id );
 			if ( ! $post || is_wp_error( $post ) ) {
-				return false;
+				return array(
+					'status'    => 'error',
+					'percent'   => 0,
+					'error_msg' => esc_html__( 'Post not found', 'content-copy-finder' )
+				);
 			}
             $text = $post->post_content;
         }
@@ -189,6 +193,7 @@ class Single_Check {
 		$matches   = json_encode( array() );
 		$status    = 'error';
 		$error_msg = false;
+		$unique_percent = 0;
         if ( ! isset( $responce['error'] ) ) {
 			$error_msg = esc_html__( 'Uniqueness Check Request Error', 'content-copy-finder' );
         } elseif ( ! empty( $responce['error'] ) ) {
@@ -196,7 +201,8 @@ class Single_Check {
         } else {
 			$matches = wp_slash( json_encode( $responce['matches'] ) );
 			$status  = 'checked';
-			update_post_meta( $post_id, '_ccf_unique_percent', $responce['percent'] );
+			$unique_percent = $responce['percent'];
+			update_post_meta( $post_id, '_ccf_unique_percent', $unique_percent );
 			delete_post_meta( $post_id, '_ccf_error_msg' );
 		}
 		if ( $error_msg ) {
@@ -205,6 +211,11 @@ class Single_Check {
 		update_post_meta( $post_id, '_ccf_status', $status );
 		update_post_meta( $post_id, '_ccf_matches', $matches );
 		update_post_meta( $post_id, '_ccf_last_check_date', date( 'U' ) );
-        return true;
+
+        return array(
+			'status'    => $status,
+			'percent'   => $unique_percent,
+			'error_msg' => $error_msg
+		);
     }
 }

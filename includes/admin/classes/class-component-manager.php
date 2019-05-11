@@ -45,13 +45,17 @@ class Component_Manager {
      * register component
      *
      * @param  string $component_name name of component
-     * @param  array $params component params
+     * @param  array|object $params component params or component object
      *
      * @return void
      */
     public function add( $component_name, $params = array() ) {
-        $this->_lazy_load[ $component_name ] = $params;
-        $this->components[ $component_name ] = null;
+        if ( is_array( $params ) ) {
+            $this->_lazy_load[ $component_name ] = $params;
+            $this->components[ $component_name ] = null;
+        } elseif ( is_object( $params ) ) {
+            $this->components[ $component_name ] = $params;
+        }
     }
 
     /**

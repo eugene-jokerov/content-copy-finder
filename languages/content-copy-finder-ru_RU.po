@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Content Copy Finder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-01 10:10+0000\n"
-"PO-Revision-Date: 2019-05-01 10:19+0000\n"
+"POT-Creation-Date: 2019-05-11 19:56+0000\n"
+"PO-Revision-Date: 2019-05-11 19:58+0000\n"
 "Last-Translator: jokerov@gmail.com\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -13,10 +13,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.2; wp-5.1.1"
+"X-Loco-Version: 2.2.2; wp-5.2"
 
 #. %s: PHP version
-#: content-copy-finder.php:29
+#: content-copy-finder.php:28
 #, php-format
 msgid ""
 "Content Copy Finder requires PHP version %s+, plugin is currently NOT "
@@ -26,7 +26,7 @@ msgstr ""
 "более раннюю версию, плагин  НЕ работает."
 
 #. %s: WordPress version
-#: content-copy-finder.php:38
+#: content-copy-finder.php:37
 #, php-format
 msgid ""
 "Content Copy Finder requires WordPress version %s+. Because you are using an "
@@ -39,52 +39,65 @@ msgstr ""
 msgid "Something went wrong."
 msgstr "Что-то пошло не так."
 
+#: includes/admin/classes/class-bulk-check.php:22
+#: includes/admin/classes/class-bulk-check.php:23
+#: includes/admin/views/settings.php:8 includes/admin/views/bulk-check.php:2
+#: includes/admin/views/bulk-check.php:7
+msgid "Bulk check"
+msgstr "Массовая проверка уникальности"
+
 #. Name of the plugin
-#: includes/admin/classes/class-single-check.php:41
-#: includes/admin/classes/class-single-check.php:80
-#: includes/admin/classes/class-settings.php:39
-#: includes/admin/classes/class-settings.php:40
+#: includes/admin/classes/class-single-check.php:64
+#: includes/admin/classes/class-single-check.php:121
+#: includes/admin/classes/class-settings.php:84
+#: includes/admin/classes/class-settings.php:85
 #: includes/admin/views/settings.php:2
 msgid "Content Copy Finder"
 msgstr "Content Copy Finder"
 
-#: includes/admin/classes/class-single-check.php:135
+#: includes/admin/classes/class-single-check.php:183
+msgid "Post not found"
+msgstr "Запись не найдена"
+
+#: includes/admin/classes/class-single-check.php:198
 msgid "Uniqueness Check Request Error"
 msgstr "Ошибка запроса на проверку уникальности"
 
-#: includes/admin/classes/class-settings.php:94
+#: includes/admin/classes/class-settings.php:70
+#: includes/admin/classes/class-settings.php:146
+#: includes/admin/views/settings.php:7 includes/admin/views/bulk-check.php:6
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/admin/classes/class-settings.php:101
+#: includes/admin/classes/class-settings.php:153
 msgid "API Key"
 msgstr "Ваш API ключ"
 
-#: includes/admin/classes/class-settings.php:109
+#: includes/admin/classes/class-settings.php:161
 msgid "may take on page"
 msgstr "можно получить на странице"
 
-#: includes/admin/classes/class-settings.php:116
+#: includes/admin/classes/class-settings.php:168
 msgid "Auto ckeck"
 msgstr "Автоматическая проверка"
 
-#: includes/admin/classes/class-settings.php:124
+#: includes/admin/classes/class-settings.php:176
 msgid "Check posts when adding and editing"
 msgstr "Проверять записи после сохранения и изменения"
 
-#: includes/admin/classes/class-settings.php:125
+#: includes/admin/classes/class-settings.php:177
 msgid "Do not automatically check"
 msgstr "Не проверять автоматически"
 
-#: includes/admin/classes/class-settings.php:144
+#: includes/admin/classes/class-settings.php:198
 msgid "Post types"
 msgstr "Типы записей"
 
-#: includes/admin/ajax/actions.php:17
+#: includes/admin/ajax/actions.php:23
 msgid "API Error:"
 msgstr "Ошибка API:"
 
-#: includes/admin/ajax/actions.php:25 includes/admin/views/account.php:3
+#: includes/admin/ajax/actions.php:31 includes/admin/views/account.php:3
 msgid "rub."
 msgstr "руб."
 
@@ -113,7 +126,7 @@ msgstr "Ещё не проверен"
 msgid "Check"
 msgstr "Проверить"
 
-#: includes/admin/views/settings.php:3
+#: includes/admin/views/settings.php:3 includes/admin/views/bulk-check.php:3
 msgid ""
 "The plugin allows you to check the text of your records for uniqueness and "
 "find copies on other sites."
@@ -125,11 +138,11 @@ msgstr ""
 msgid "For check use API"
 msgstr "Для проверки используется API сервиса"
 
-#: includes/admin/views/settings.php:7
+#: includes/admin/views/settings.php:12
 msgid "Account"
 msgstr "Ваш аккаунт"
 
-#: includes/admin/views/settings.php:13
+#: includes/admin/views/settings.php:18
 msgid "Scheme of work"
 msgstr "Схема работы"
 
@@ -173,6 +186,46 @@ msgstr "Проверить баланс"
 msgid "Add funds"
 msgstr "Пополнить баланс"
 
+#: includes/admin/views/bulk-check.php:14
+msgid "Select post type"
+msgstr "Выберите тип записи"
+
+#: includes/admin/views/bulk-check.php:39
+msgid "Mass check in progress"
+msgstr "Идёт массовая проверка"
+
+#: includes/admin/views/bulk-check.php:41
+msgid "Processed"
+msgstr "Обработано"
+
+#: includes/admin/views/bulk-check.php:41
+msgid "of"
+msgstr "из"
+
+#: includes/admin/views/bulk-check.php:46
+msgid "Post title"
+msgstr "Заголовок записи"
+
+#: includes/admin/views/bulk-check.php:47
+msgid "Checking results"
+msgstr "Результат проверки"
+
+#: includes/admin/views/bulk-check.php:57
+msgid "Start checking"
+msgstr "Начать проверку"
+
+#: includes/admin/views/bulk-check.php:57
+msgid "Processing completed"
+msgstr "Проверка завершена"
+
+#: includes/admin/views/bulk-check.php:57
+msgid "Stop"
+msgstr "Остановить"
+
+#: includes/admin/views/bulk-check.php:57
+msgid "Continue"
+msgstr "Возобновить"
+
 #: includes/admin/views/steps.php:1
 msgid "Register on the site"
 msgstr "Зарегистрируйтесь на сайте"
@@ -200,7 +253,3 @@ msgstr "Проверка текста на уникальность и поис�
 #. Author of the plugin
 msgid "Eugene Jokerov"
 msgstr "Eugene Jokerov"
-
-#. Author URI of the plugin
-msgid "https://profiles.wordpress.org/jokerov/"
-msgstr "https://profiles.wordpress.org/jokerov/"

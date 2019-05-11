@@ -100,7 +100,7 @@ class Settings {
 			CCF_PLUGIN_VERSION 
 		);
 
-        add_action( 'admin_print_scripts-settings_page_content-copy-finder', function() {
+        add_action( "admin_print_scripts-settings_page_{$this->settings_page_slug}", function() {
 			wp_enqueue_script( 'ccf-admin-settings-js' );
 		} );
 
@@ -125,7 +125,7 @@ class Settings {
             $is_api_key_exists = true;
         }
         View::render( 'settings', array(
-            'is_api_key_exists' => $is_api_key_exists
+            'is_api_key_exists' => $is_api_key_exists,
         ) );
 	}
 
