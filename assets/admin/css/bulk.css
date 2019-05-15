@@ -1,6 +1,7 @@
 .ccf-bulk-page .ui-progressbar {
     position: relative;
 }
+
 .ccf-bulk-page .progress-label {
     position: absolute;
     left: 50%;

@@ -214,8 +214,8 @@ class Single_Check {
 
         return array(
 			'status'    => $status,
-			'percent'   => $unique_percent,
-			'error_msg' => $error_msg
+			'percent'   => esc_html( $unique_percent ),
+			'error_msg' => esc_html( $error_msg )
 		);
     }
 }

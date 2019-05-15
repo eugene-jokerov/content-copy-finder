@@ -12,10 +12,20 @@ class Bulk_Check {
      */
 	protected $page_slug = 'ccf-bulk-check';
 	
+	/**
+     * add hooks
+     *
+     * @return void
+     */
     public function hooks() {
         add_action( 'admin_menu', array( $this, 'admin_menu' ) );
     }
 
+	/**
+     * Add link to WP admin menu and register scripts
+     *
+     * @return void
+     */
     public function admin_menu() {
 		$page = add_submenu_page(
 			'tools.php', 

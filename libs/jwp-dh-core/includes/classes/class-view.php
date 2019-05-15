@@ -96,12 +96,12 @@
 		 */
 		public function data_atts() {
 			$atts = array(
-				'action'  => $this->params['ajax_action'],
-				'handler' => $this->params['handler_name'],
-				'wpnonce' => $this->nonce(),
-				'offset'  => $this->params['offset'],
-				'total'   => $this->params['total'],
-				'level'   => $this->params['level'],
+				'action'  => esc_attr( $this->params['ajax_action'] ),
+				'handler' => esc_attr( $this->params['handler_name'] ),
+				'wpnonce' => esc_attr( $this->nonce() ),
+				'offset'  => esc_attr( $this->params['offset'] ),
+				'total'   => esc_attr( $this->params['total'] ),
+				'level'   => esc_attr( $this->params['level'] ),
 				'custom'  => json_encode( $this->params['custom'] ),
 			);
 			$data_atts = '';
