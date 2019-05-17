@@ -98,7 +98,13 @@ class Settings {
 			CCF_PLUGIN_URL . 'assets/admin/js/settings.js', 
 			array( 'jquery' ), 
 			CCF_PLUGIN_VERSION 
-		);
+        );
+        wp_register_style( 
+            'ccf-admin-css', 
+            CCF_PLUGIN_URL . 'assets/admin/css/ccf.css', 
+            array(), 
+            CCF_PLUGIN_VERSION 
+        );
 
         add_action( "admin_print_scripts-settings_page_{$this->settings_page_slug}", function() {
 			wp_enqueue_script( 'ccf-admin-settings-js' );
@@ -109,7 +115,8 @@ class Settings {
             $post_types = $this->get_option( 'post_types', array() );
             $post_types = array_keys( $post_types );
 			if ( is_object( $screen ) && in_array( $screen->post_type, $post_types ) ) {
-				wp_enqueue_script( 'ccf-admin-js' );
+                wp_enqueue_script( 'ccf-admin-js' );
+                wp_enqueue_style( 'ccf-admin-css' );
 			}
 		} );
 	}

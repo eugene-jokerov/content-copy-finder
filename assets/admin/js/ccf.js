@@ -35,4 +35,14 @@ jQuery( function( $ ) {
         return false;
     } );
 
+    $( document ).on( 'click', '.ccf-show-matches', function() {
+        if ( $( '.ccf-text-matches' ).is( ':visible' ) ) {
+            $( this ).text( $( this ).data( 'show' ) );
+        } else {
+            $( this ).text( $( this ).data( 'hide' ) );
+        }
+        $( '.ccf-text-matches, .ccf-text-info' ).toggle();
+        return false;
+    } );
+
 } );

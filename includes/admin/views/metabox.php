@@ -1,3 +1,14 @@
+<?php
+    $checked_text = '';
+    if ( $matches && isset( $matches[0]['url'] ) ) {
+        $words = explode( ' ', $text );
+        for ( $i = 0 ; $i < count( $highlight ) ; $i++ ) {
+            $words[ $highlight[$i][0] ] = '<span class="ccf-match-word">' . $words[ $highlight[$i][0] ];
+            $words[ $highlight[$i][1] ] = $words[ $highlight[$i][1] ] . '</span>';
+        }
+        $checked_text = join( ' ', $words );
+    }
+?>
 <input type="hidden" id="ccf-progress-text" value="<?php esc_html_e( 'Uniqueness check in progress', 'content-copy-finder' ); ?>">
 <?php if ( 'processing' == $status ) : ?>
     <div class="ccf_for_check">
@@ -23,6 +34,13 @@
                         </tr>
                     <?php endforeach; ?>
                 </table>
+                <p>
+                    <span class="button ccf-show-matches" data-show="<?php esc_html_e( 'Show matches', 'content-copy-finder' ); ?>" data-hide="<?php esc_html_e( 'Hide matches', 'content-copy-finder' ); ?>"><?php esc_html_e( 'Show matches', 'content-copy-finder' ); ?></span>
+                </p>
+                <p class="ccf-text-info">* <?php esc_html_e( 'Before checking, the server cleared the text from markup and formatting. Therefore, the result looks monotonous. This is necessary for greater accuracy in finding plagiarism. Non-unique text fragments are highlighted.', 'content-copy-finder' ); ?></p>
+                <p class="ccf-text-matches">
+                    <?php echo wp_kses_post( $checked_text ); ?>
+                </p>
             <?php endif; ?>
         </div>
     <?php elseif ( 'error' == $status ) : ?>

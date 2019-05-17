@@ -142,10 +142,14 @@ class Single_Check {
 		$status    = get_post_meta( $post->ID, '_ccf_status', true );
 		$percent   = 0;
 		$matches   = false;
+		$highlight = array();
+		$text      = '';
 		$error_msg = '';
 		if ( 'checked' == $status ) {
-			$percent = get_post_meta( $post->ID, '_ccf_unique_percent', true );
-			$matches = get_post_meta( $post->ID, '_ccf_matches', true );
+			$percent   = get_post_meta( $post->ID, '_ccf_unique_percent', true );
+			$matches   = get_post_meta( $post->ID, '_ccf_matches', true );
+			$highlight = get_post_meta( $post->ID, '_ccf_highlight', true );
+			$text      = get_post_meta( $post->ID, '_ccf_text', true );
 			if ( ! $matches ) {
 				return '';
 			}
@@ -159,6 +163,8 @@ class Single_Check {
 			'status'    => $status,
 			'percent'   => $percent,
 			'matches'   => $matches,
+			'highlight' => $highlight,
+			'text'      => $text,
 			'error_msg' => $error_msg,
 			'nonce'     => wp_create_nonce( 'ccf_check_post' )
 		) );
@@ -203,10 +209,13 @@ class Single_Check {
 			$status  = 'checked';
 			$unique_percent = $responce['percent'];
 			update_post_meta( $post_id, '_ccf_unique_percent', $unique_percent );
+			update_post_meta( $post_id, '_ccf_highlight', $responce['highlight'] );
+			update_post_meta( $post_id, '_ccf_text', $responce['text'] );
 			delete_post_meta( $post_id, '_ccf_error_msg' );
 		}
 		if ( $error_msg ) {
 			update_post_meta( $post_id, '_ccf_error_msg', $error_msg );
+			delete_post_meta( $post_id, '_ccf_text' );
 		}
 		update_post_meta( $post_id, '_ccf_status', $status );
 		update_post_meta( $post_id, '_ccf_matches', $matches );

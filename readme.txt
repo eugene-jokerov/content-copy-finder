@@ -53,6 +53,11 @@ This plugin allows you to check the texts for uniqueness and find plagiarism on 
 
 == Changelog ==
 
+= 1.1.0 =
+*Release Date - 15-05-2019*
+
+Массовая проверка текстов записей на уникальность
+
 = 1.0.0 =
 *Release Date - 09-05-2019*
 
