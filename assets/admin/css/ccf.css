@@ -1,0 +1,11 @@
+.ccf-text-matches, .ccf-text-info {
+    display:none;
+}
+
+.ccf-match-word {
+   background-color: #ffe9e9; 
+}
+
+.ccf-text-info {
+    font-style: italic;
+}

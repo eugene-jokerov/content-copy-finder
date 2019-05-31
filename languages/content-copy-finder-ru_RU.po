@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Content Copy Finder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-11 19:56+0000\n"
-"PO-Revision-Date: 2019-05-11 19:58+0000\n"
+"POT-Creation-Date: 2019-05-21 19:21+0000\n"
+"PO-Revision-Date: 2019-05-21 19:21+0000\n"
 "Last-Translator: jokerov@gmail.com\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -39,8 +39,8 @@ msgstr ""
 msgid "Something went wrong."
 msgstr "Что-то пошло не так."
 
-#: includes/admin/classes/class-bulk-check.php:22
-#: includes/admin/classes/class-bulk-check.php:23
+#: includes/admin/classes/class-bulk-check.php:32
+#: includes/admin/classes/class-bulk-check.php:33
 #: includes/admin/views/settings.php:8 includes/admin/views/bulk-check.php:2
 #: includes/admin/views/bulk-check.php:7
 msgid "Bulk check"
@@ -55,41 +55,41 @@ msgstr "Массовая проверка уникальности"
 msgid "Content Copy Finder"
 msgstr "Content Copy Finder"
 
-#: includes/admin/classes/class-single-check.php:183
+#: includes/admin/classes/class-single-check.php:189
 msgid "Post not found"
 msgstr "Запись не найдена"
 
-#: includes/admin/classes/class-single-check.php:198
+#: includes/admin/classes/class-single-check.php:204
 msgid "Uniqueness Check Request Error"
 msgstr "Ошибка запроса на проверку уникальности"
 
 #: includes/admin/classes/class-settings.php:70
-#: includes/admin/classes/class-settings.php:146
+#: includes/admin/classes/class-settings.php:153
 #: includes/admin/views/settings.php:7 includes/admin/views/bulk-check.php:6
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/admin/classes/class-settings.php:153
+#: includes/admin/classes/class-settings.php:160
 msgid "API Key"
 msgstr "Ваш API ключ"
 
-#: includes/admin/classes/class-settings.php:161
+#: includes/admin/classes/class-settings.php:168
 msgid "may take on page"
 msgstr "можно получить на странице"
 
-#: includes/admin/classes/class-settings.php:168
+#: includes/admin/classes/class-settings.php:175
 msgid "Auto ckeck"
 msgstr "Автоматическая проверка"
 
-#: includes/admin/classes/class-settings.php:176
+#: includes/admin/classes/class-settings.php:183
 msgid "Check posts when adding and editing"
 msgstr "Проверять записи после сохранения и изменения"
 
-#: includes/admin/classes/class-settings.php:177
+#: includes/admin/classes/class-settings.php:184
 msgid "Do not automatically check"
 msgstr "Не проверять автоматически"
 
-#: includes/admin/classes/class-settings.php:198
+#: includes/admin/classes/class-settings.php:205
 msgid "Post types"
 msgstr "Типы записей"
 
@@ -102,11 +102,11 @@ msgid "rub."
 msgstr "руб."
 
 #: includes/admin/views/column.php:1 includes/admin/views/column.php:6
-#: includes/admin/views/metabox.php:1 includes/admin/views/metabox.php:4
+#: includes/admin/views/metabox.php:12 includes/admin/views/metabox.php:15
 msgid "Uniqueness check in progress"
 msgstr "Идёт проверка"
 
-#: includes/admin/views/column.php:4 includes/admin/views/metabox.php:12
+#: includes/admin/views/column.php:4 includes/admin/views/metabox.php:23
 msgid "Uniqueness"
 msgstr "Уникальность"
 
@@ -114,7 +114,7 @@ msgstr "Уникальность"
 msgid "text checked"
 msgstr "проверен"
 
-#: includes/admin/views/column.php:8 includes/admin/views/metabox.php:30
+#: includes/admin/views/column.php:8 includes/admin/views/metabox.php:48
 msgid "Check error"
 msgstr "Ошибка при проверке"
 
@@ -146,21 +146,39 @@ msgstr "Ваш аккаунт"
 msgid "Scheme of work"
 msgstr "Схема работы"
 
-#: includes/admin/views/metabox.php:5
+#: includes/admin/views/metabox.php:16
 msgid "Get results without page reload"
 msgstr "Получить результат без перезагрузки страницы"
 
-#: includes/admin/views/metabox.php:9
+#: includes/admin/views/metabox.php:20
 msgid "Check text"
 msgstr "Проверить текст"
 
-#: includes/admin/views/metabox.php:16
+#: includes/admin/views/metabox.php:27
 msgid "Page URL"
 msgstr "Адрес страницы"
 
-#: includes/admin/views/metabox.php:17
+#: includes/admin/views/metabox.php:28
 msgid "Matches"
 msgstr "Совпадений"
+
+#: includes/admin/views/metabox.php:38
+msgid "Show matches"
+msgstr "Показать совпадения"
+
+#: includes/admin/views/metabox.php:38
+msgid "Hide matches"
+msgstr "Скрыть совпадения"
+
+#: includes/admin/views/metabox.php:40
+msgid ""
+"Before checking, the server cleared the text from markup and formatting. "
+"Therefore, the result looks monotonous. This is necessary for greater "
+"accuracy in finding plagiarism. Non-unique text fragments are highlighted."
+msgstr ""
+"Перед проверкой, сервер очистил текст от разметки и форматирования. Поэтому "
+"результат выглядит монотонно. Это необходимо для большей точности нахождения "
+"плагиата. Цветом выделены не уникальные фрагменты текста."
 
 #: includes/admin/views/account.php:2
 msgid "Balance"
@@ -190,39 +208,90 @@ msgstr "Пополнить баланс"
 msgid "Select post type"
 msgstr "Выберите тип записи"
 
-#: includes/admin/views/bulk-check.php:39
+#: includes/admin/views/bulk-check.php:37
+msgid "Check type"
+msgstr "Тип проверки"
+
+#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:46
+msgid "All entries of the selected type will be checked for uniqueness."
+msgstr "На уникальность будут проверены все записи выбранного типа."
+
+#: includes/admin/views/bulk-check.php:41
+msgid "All records"
+msgstr "Все записи"
+
+#: includes/admin/views/bulk-check.php:42
+msgid ""
+"Only those records that have not been previously checked will be checked for "
+"uniqueness."
+msgstr ""
+"На уникальность будут проверены только те записи, которые ранее не "
+"проверялись."
+
+#: includes/admin/views/bulk-check.php:42
+msgid "Unchecked"
+msgstr "Не проверенные"
+
+#: includes/admin/views/bulk-check.php:43
+msgid "Records checked for uniqueness will be rechecked again."
+msgstr ""
+"Записи, которые ранее уже были проверены на уникальность, будут "
+"перепроверены снова."
+
+#: includes/admin/views/bulk-check.php:43
+msgid "Checked"
+msgstr "Проверенные"
+
+#: includes/admin/views/bulk-check.php:44
+msgid ""
+"Only those records that were previously checked with an error will be "
+"checked for uniqueness."
+msgstr ""
+"На уникальность будут проверены только те записи, которые ранее были "
+"проверены с ошибкой."
+
+#: includes/admin/views/bulk-check.php:44
+msgid "With error"
+msgstr "С ошибкой"
+
+#: includes/admin/views/bulk-check.php:51
+msgid "Post status"
+msgstr "Статусы записи"
+
+#: includes/admin/views/bulk-check.php:72
 msgid "Mass check in progress"
 msgstr "Идёт массовая проверка"
 
-#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:74
 msgid "Processed"
 msgstr "Обработано"
 
-#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:74
 msgid "of"
 msgstr "из"
 
-#: includes/admin/views/bulk-check.php:46
+#: includes/admin/views/bulk-check.php:79
 msgid "Post title"
 msgstr "Заголовок записи"
 
-#: includes/admin/views/bulk-check.php:47
+#: includes/admin/views/bulk-check.php:80
 msgid "Checking results"
 msgstr "Результат проверки"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Start checking"
 msgstr "Начать проверку"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Processing completed"
 msgstr "Проверка завершена"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Stop"
 msgstr "Остановить"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Continue"
 msgstr "Возобновить"
 

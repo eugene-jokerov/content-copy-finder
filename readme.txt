@@ -4,7 +4,7 @@ Tags: plagiarism, plagiat, content
 Requires at least: 4.9
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -50,8 +50,19 @@ This plugin allows you to check the texts for uniqueness and find plagiarism on 
 1. Content Copy Finder страница настроек
 2. Колонка в списке записей
 3. Результаты проверки на странице редактирования записи
+4. Массовая проверка уникальности
 
 == Changelog ==
+
+= 1.2.0 =
+*Release Date - 31-05-2019*
+
+Подсветка совпадений. Улучшена массовая проверка.
+
+= 1.1.0 =
+*Release Date - 15-05-2019*
+
+Массовая проверка текстов записей на уникальность
 
 = 1.0.0 =
 *Release Date - 09-05-2019*
