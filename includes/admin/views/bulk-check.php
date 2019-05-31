@@ -11,7 +11,7 @@
         <tbody>
         <tr>
             <th scope="row" valign="top">
-                <label for="cron_internal_name"><?php esc_html_e( 'Select post type', 'content-copy-finder' ); ?></label>
+                <label><?php esc_html_e( 'Select post type', 'content-copy-finder' ); ?></label>
             </th>
             <td>
                 <select class="ccf-post-type">
@@ -30,6 +30,39 @@
                         }
                     ?>
                 </select>
+            </td>  
+        </tr>
+        <tr>
+            <th scope="row" valign="top">
+                <label><?php esc_html_e( 'Check type', 'content-copy-finder' ); ?></label>
+            </th>
+            <td>
+                <select class="ccf-check-type">
+                    <option value="all" data-descr="<?php esc_html_e( 'All entries of the selected type will be checked for uniqueness.', 'content-copy-finder' ); ?>"><?php esc_html_e( 'All records', 'content-copy-finder' ); ?></option>
+                    <option value="unchecked" data-descr="<?php esc_html_e( 'Only those records that have not been previously checked will be checked for uniqueness.', 'content-copy-finder' ); ?>"><?php esc_html_e( 'Unchecked', 'content-copy-finder' ); ?></option>
+                    <option value="checked" data-descr="<?php esc_html_e( 'Records checked for uniqueness will be rechecked again.', 'content-copy-finder' ); ?>"><?php esc_html_e( 'Checked', 'content-copy-finder' ); ?></option>
+                    <option value="error" data-descr="<?php esc_html_e( 'Only those records that were previously checked with an error will be checked for uniqueness.', 'content-copy-finder' ); ?>"><?php esc_html_e( 'With error', 'content-copy-finder' ); ?></option>
+                </select>
+                <p class="description"><?php esc_html_e( 'All entries of the selected type will be checked for uniqueness.', 'content-copy-finder' ); ?></p>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" valign="top">
+                <label><?php esc_html_e( 'Post status', 'content-copy-finder' ); ?></label>
+            </th>
+            <td>
+                <?php
+                    $post_types = get_post_types( array(
+                        'public'   => true,
+                        '_builtin' => true
+                    ), 'objects' );
+                    $post_statuses = get_post_statuses();
+                    foreach ( $post_statuses as $key => $value ) {
+                        echo '<label for="ccf-post-status-' . esc_attr( $key ) . '">
+                                <input type="checkbox" id="ccf-post-status-' . esc_attr( $key ) . '" class="ccf-post-statuses" value="' . esc_attr( $key ) . '" ' . checked( 'publish', $key, false ) . '>'.esc_attr( $value ).'
+                        </label><br>';
+                    }
+                ?>
             </td>
         </tr>
         </tbody>

@@ -1,16 +1,28 @@
-jQuery( function( $ ){
+jQuery( function( $ ) {
 	$( '.jwp-dh-start' ).jwpdh();
 
-    var progressbar = $( "#progressbar" );
+    var progressbar = $( '#progressbar' );
 
     progressbar.progressbar( {
         value: false,
-    } );
+	} );
+	
+	$( '.ccf-check-type' ).on( 'change', function() {
+		$( this ).closest( 'td' ).find( 'p' ).text( $( this ).find( 'option:selected' ).data( 'descr' ) );
+	} );
 	
 	$( document ).on( 'jwpdh.start', function( e, event_info ) { 
-        var button = event_info.self;
+		var button = event_info.self;
+		var post_statuses = [];
+		if ( $( '.ccf-post-statuses:checked' ).length ) {
+			$( '.ccf-post-statuses:checked' ).each(function(){
+				post_statuses.push( $(this).val() );
+			} );
+		}
         button.data( 'dh-custom', {
-            'post_type' : $( '.ccf-post-type' ).val()
+			'post_type' : $( '.ccf-post-type' ).val(),
+			'post_statuses' : post_statuses,
+			'check_type' : $( '.ccf-check-type' ).val()
         } );
 		event_info.self.val( event_info.self.data( 'stop' ) );
 	} );

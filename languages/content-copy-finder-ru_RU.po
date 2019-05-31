@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Content Copy Finder\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 14:12+0000\n"
-"PO-Revision-Date: 2019-05-17 14:14+0000\n"
+"POT-Creation-Date: 2019-05-21 19:21+0000\n"
+"PO-Revision-Date: 2019-05-21 19:21+0000\n"
 "Last-Translator: jokerov@gmail.com\n"
 "Language-Team: Русский\n"
 "Language: ru_RU\n"
@@ -208,39 +208,90 @@ msgstr "Пополнить баланс"
 msgid "Select post type"
 msgstr "Выберите тип записи"
 
-#: includes/admin/views/bulk-check.php:39
+#: includes/admin/views/bulk-check.php:37
+msgid "Check type"
+msgstr "Тип проверки"
+
+#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:46
+msgid "All entries of the selected type will be checked for uniqueness."
+msgstr "На уникальность будут проверены все записи выбранного типа."
+
+#: includes/admin/views/bulk-check.php:41
+msgid "All records"
+msgstr "Все записи"
+
+#: includes/admin/views/bulk-check.php:42
+msgid ""
+"Only those records that have not been previously checked will be checked for "
+"uniqueness."
+msgstr ""
+"На уникальность будут проверены только те записи, которые ранее не "
+"проверялись."
+
+#: includes/admin/views/bulk-check.php:42
+msgid "Unchecked"
+msgstr "Не проверенные"
+
+#: includes/admin/views/bulk-check.php:43
+msgid "Records checked for uniqueness will be rechecked again."
+msgstr ""
+"Записи, которые ранее уже были проверены на уникальность, будут "
+"перепроверены снова."
+
+#: includes/admin/views/bulk-check.php:43
+msgid "Checked"
+msgstr "Проверенные"
+
+#: includes/admin/views/bulk-check.php:44
+msgid ""
+"Only those records that were previously checked with an error will be "
+"checked for uniqueness."
+msgstr ""
+"На уникальность будут проверены только те записи, которые ранее были "
+"проверены с ошибкой."
+
+#: includes/admin/views/bulk-check.php:44
+msgid "With error"
+msgstr "С ошибкой"
+
+#: includes/admin/views/bulk-check.php:51
+msgid "Post status"
+msgstr "Статусы записи"
+
+#: includes/admin/views/bulk-check.php:72
 msgid "Mass check in progress"
 msgstr "Идёт массовая проверка"
 
-#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:74
 msgid "Processed"
 msgstr "Обработано"
 
-#: includes/admin/views/bulk-check.php:41
+#: includes/admin/views/bulk-check.php:74
 msgid "of"
 msgstr "из"
 
-#: includes/admin/views/bulk-check.php:46
+#: includes/admin/views/bulk-check.php:79
 msgid "Post title"
 msgstr "Заголовок записи"
 
-#: includes/admin/views/bulk-check.php:47
+#: includes/admin/views/bulk-check.php:80
 msgid "Checking results"
 msgstr "Результат проверки"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Start checking"
 msgstr "Начать проверку"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Processing completed"
 msgstr "Проверка завершена"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Stop"
 msgstr "Остановить"
 
-#: includes/admin/views/bulk-check.php:57
+#: includes/admin/views/bulk-check.php:90
 msgid "Continue"
 msgstr "Возобновить"
 
