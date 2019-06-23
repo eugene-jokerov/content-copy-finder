@@ -2,11 +2,13 @@
     $checked_text = '';
     if ( $matches && isset( $matches[0]['url'] ) ) {
         $words = explode( ' ', $text );
-        for ( $i = 0 ; $i < count( $highlight ) ; $i++ ) {
-            $words[ $highlight[$i][0] ] = '<span class="ccf-match-word">' . $words[ $highlight[$i][0] ];
-            $words[ $highlight[$i][1] ] = $words[ $highlight[$i][1] ] . '</span>';
+        if ( $highlight && is_array( $highlight ) ) {
+            for ( $i = 0 ; $i < count( $highlight ) ; $i++ ) {
+                $words[ $highlight[$i][0] ] = '<span class="ccf-match-word">' . $words[ $highlight[$i][0] ];
+                $words[ $highlight[$i][1] ] = $words[ $highlight[$i][1] ] . '</span>';
+            }
+            $checked_text = join( ' ', $words );
         }
-        $checked_text = join( ' ', $words );
     }
 ?>
 <input type="hidden" id="ccf-progress-text" value="<?php esc_html_e( 'Uniqueness check in progress', 'content-copy-finder' ); ?>">

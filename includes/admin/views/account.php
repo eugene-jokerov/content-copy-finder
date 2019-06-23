@@ -7,5 +7,5 @@
 </p>
 <p>
     <button data-nonce="<?php echo esc_attr( wp_create_nonce( 'ccf_balance' ) ); ?>" class="button" id="ccf-check-balance"><?php esc_html_e( 'Check balance', 'content-copy-finder' ); ?></button>
-    <a class="button" href="http://content-watch.ru/pay/#api" target="_blank"><?php esc_html_e( 'Add funds', 'content-copy-finder' ); ?></a>
+    <a class="button" href="http://content-watch.ru/pay/?ref=Pvumudx6v0prYpU#api" target="_blank"><?php esc_html_e( 'Add funds', 'content-copy-finder' ); ?></a>
 </p>

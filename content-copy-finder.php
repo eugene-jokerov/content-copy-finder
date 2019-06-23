@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Content Copy Finder
 * Description: Check text for uniqueness and plagiarism search
-* Version: 1.2.0
+* Version: 1.2.1
 * Author: Eugene Jokerov
 * License: GPLv2
 * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -42,7 +42,7 @@ if ( version_compare( get_bloginfo( 'version' ), '4.9', '<' ) ) {
 }
 
 if ( ! defined( 'CCF_PLUGIN_VERSION' ) ) {
-	define( 'CCF_PLUGIN_VERSION', '1.2.0' );
+	define( 'CCF_PLUGIN_VERSION', '1.2.1' );
 }
 
 if ( ! defined( 'CCF_PLUGIN_PATH' ) ) {
