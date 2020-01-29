@@ -133,29 +133,13 @@ final class Plugin {
 	 * load classes and scripts
 	 */
 	protected function include_scripts() {
-		spl_autoload_register( function( $class_name ) {
-			$base_path = CCF_PLUGIN_PATH . '/includes/admin/classes/';
-			$class_map = array(
-				'JWP\CCF\Component_Manager'  => $base_path . 'class-component-manager.php',
-				'JWP\CCF\Settings'           => $base_path . 'class-settings.php',
-				'JWP\CCF\View'               => $base_path . 'class-view.php',
-				'JWP\CCF\Api'                => $base_path . 'class-api.php',
-				'JWP\CCF\Single_Check'       => $base_path . 'class-single-check.php',
-				'JWP\CCF\Bulk_Check'         => $base_path . 'class-bulk-check.php',
-				'JWP\CCF\Bulk_Check_Handler' => $base_path . 'class-bulk-check-handler.php',
-			);
-			if ( isset( $class_map[ $class_name ] ) && file_exists( $class_map[ $class_name ] ) ) {
-				include_once $class_map[ $class_name ];
-			}
-		} );
-
 		$dh_path = CCF_PLUGIN_PATH . '/libs/jwp-dh-core/jwp-dh.php';
 		if ( file_exists( $dh_path ) ) {
 			include_once $dh_path;
 		}
 		
 		if ( wp_doing_ajax() ) {
-			include_once CCF_PLUGIN_PATH . '/includes/admin/ajax/actions.php';
+			include_once CCF_PLUGIN_PATH . '/includes/ajax/actions.php';
 		}
 	}
 	

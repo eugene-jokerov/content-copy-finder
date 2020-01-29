@@ -10,11 +10,11 @@
 
     <?php if ( $is_api_key_exists ) : ?>
         <h2><?php esc_html_e( 'Account', 'content-copy-finder' ); ?></h2>
-        <?php include CCF_PLUGIN_PATH . '/includes/admin/views/account.php'; ?>
+        <?php include CCF_PLUGIN_PATH . '/views/account.php'; ?>
     <?php endif; ?>
 
-    <?php include CCF_PLUGIN_PATH . '/includes/admin/views/form.php'; ?>
+    <?php include CCF_PLUGIN_PATH . '/views/form.php'; ?>
 
     <h2><?php esc_html_e( 'Scheme of work', 'content-copy-finder' ); ?></h2>
-    <?php include CCF_PLUGIN_PATH . '/includes/admin/views/steps.php'; ?>
+    <?php include CCF_PLUGIN_PATH . '/views/steps.php'; ?>
 </div>

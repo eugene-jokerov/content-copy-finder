@@ -66,7 +66,7 @@ class Bulk_Check {
 	public function page() {
 		$class = 'JWP\CCF\Bulk_Check_Handler';
 		$params = array(
-			'template_file' => CCF_PLUGIN_PATH . '/includes/admin/views/bulk-check.php'
+			'template_file' => CCF_PLUGIN_PATH . '/views/bulk-check.php'
 		);
         Plugin::component( 'dh' )->render_handler_page( $class, $params );
 	}

@@ -58,7 +58,7 @@ if ( ! defined( 'CCF_PLUGIN_URL' ) ) {
 }
 
 if ( ! class_exists( '\JWP\CCF\Plugin' ) ) {
-	include_once CCF_PLUGIN_PATH . '/includes/class-plugin.php';
+	include_once CCF_PLUGIN_PATH . '/includes/autoload.php';
 	\JWP\CCF\Plugin::instance();
 }
 
