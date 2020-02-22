@@ -4,7 +4,7 @@ Tags: plagiarism, plagiat, content
 Requires at least: 4.9
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -53,6 +53,11 @@ This plugin allows you to check the texts for uniqueness and find plagiarism on 
 4. Массовая проверка уникальности
 
 == Changelog ==
+
+= 1.2.2 =
+*Release Date - 23-02-2020*
+
+Технические улучшения
 
 = 1.2.1 =
 *Release Date - 23-06-2019*
